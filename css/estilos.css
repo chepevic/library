@@ -1,0 +1,93 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "aside content content content content content";
+  font-family: 'Roboto', sans-serif;
+}
+
+aside {
+  background-color: #f8f8f8;
+  grid-area: 'aside';
+  padding: 1.25rem;
+  height: 100vh;
+}
+
+aside .menu__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+aside .menu__option:hover {
+  cursor: pointer;
+}
+
+aside .menu__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5rem;
+  -webkit-transition: -webkit-box-flex 1s ease-in;
+  transition: -webkit-box-flex 1s ease-in;
+  transition: flex 1s ease-in;
+  transition: flex 1s ease-in, -webkit-box-flex 1s ease-in, -ms-flex 1s ease-in;
+}
+
+aside .menu__options span {
+  color: #222222;
+  font-weight: 700;
+}
+
+aside .menu__options a {
+  color: rgba(34, 34, 34, 0.6);
+  display: block;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+#library_content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: content;
+}
+
+.rotate_arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.none {
+  display: none !important;
+}
+
+.fa-chevron-right {
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+}
+
+.fa-chevron-right:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=estilos.css.map */
